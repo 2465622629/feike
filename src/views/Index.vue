@@ -38,11 +38,11 @@
           <el-col span="12">
             <!--            介绍图片-->
             <div class="about-img">
-              <img src="../assets/image/img/a033.png" alt="">
+              <img style="width: 100%;height: 30%" src="../assets/image/img/a033.png" alt="">
             </div>
           </el-col>
           <!--            文本描述-->
-          <el-col span="24" offset="1" push="1">
+          <el-col span="48" offset="1" push="1">
             <div>
               <h1 class="green_font" style="text-align: left">飞克泵业</h1>
               <!--              <p style="width: 100%; overflow-wrap: break-word">156</p>-->
@@ -60,6 +60,9 @@
                 “克服阻力，”飞越梦想” 努力创新的“飞克人，将继续致力于技术
                 的创新、质量的进步和服务的升华，为顾客创造和提供更大的价值。
               </p>
+              <div class="green-button" style="text-align: left">
+                <button>→</button>
+              </div>
             </div>
           </el-col>
         </el-row>
@@ -127,13 +130,38 @@ export default {
 .green_font {
   color: rgb(0, 119, 46);
 }
+
 /*描述文本样式*/
-.about-text{
-  font-size: 0.3em;
-  width: 300px;
+.about-text {
+  font-size: 0.7em;
+  width: 350px;
   height: auto;
   overflow-wrap: break-word;
   text-align: left;
 }
+
 /*关于 图片样式*/
+.about-img {
+  width: 75%;
+  height: auto;
+}
+
+/*跳转箭头*/
+.green-button {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.green-button button {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  line-height: 30px;
+  border-radius: 50%;
+  background: rgb(11, 114, 52);
+  font-size: 1em;
+  color: white;
+  font-weight: 800;
+}
 </style>
