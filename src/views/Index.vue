@@ -33,9 +33,35 @@
             <h2 style="color: rgb(144,144,144); font-weight: 400">诚信为重 &nbsp; &nbsp; 合作共赢</h2>
           </el-col>
         </el-row>
-<!--        公司简介-->
-        <el-row>
-          <el-col></el-col>
+        <!--        公司简介-->
+        <el-row justify="center" gutter="30">
+          <el-col span="12">
+            <!--            介绍图片-->
+            <div class="about-img">
+              <img src="../assets/image/img/a033.png" alt="">
+            </div>
+          </el-col>
+          <!--            文本描述-->
+          <el-col span="24" offset="1" push="1">
+            <div>
+              <h1 class="green_font" style="text-align: left">飞克泵业</h1>
+              <!--              <p style="width: 100%; overflow-wrap: break-word">156</p>-->
+              <p class="about-text">
+                &nbsp; &nbsp;浙江飞克泵业有限公司是一家专业生产各类水泵及控制设备的水
+                处理企业。公司产品主要为城市建设工程、农业灌溉、生活供水、消
+                防、矿产、污水处理、园林喷灌及工业用水等行业提供全面的水处理
+                解决方案。
+              </p>
+              <p class="about-text">
+                &nbsp; &nbsp; 公司秉承“品质”、“创新” 、“未来” 的经营理念，致力于
+                为顾客提供高科技、高品质的产品和服务。公司建立了完善的微机自
+                动水泵测试平台，拥有专业的技术研发队伍，拥有精良先进的生产流
+                水线，并有多项产品取得国家专利，获得国家质量信用企业称号。
+                “克服阻力，”飞越梦想” 努力创新的“飞克人，将继续致力于技术
+                的创新、质量的进步和服务的升华，为顾客创造和提供更大的价值。
+              </p>
+            </div>
+          </el-col>
         </el-row>
       </div>
     </el-scrollbar>
@@ -101,5 +127,13 @@ export default {
 .green_font {
   color: rgb(0, 119, 46);
 }
-
+/*描述文本样式*/
+.about-text{
+  font-size: 0.3em;
+  width: 300px;
+  height: auto;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+/*关于 图片样式*/
 </style>
