@@ -66,6 +66,24 @@
             </div>
           </el-col>
         </el-row>
+<!--          热线图片-->
+        <el-row>
+          <el-col>
+            <div>1</div>
+          </el-col>
+
+          <el-col>
+            <div>12</div>
+          </el-col>
+
+          <el-col>
+            <div>3</div>
+          </el-col>
+
+          <el-col>
+            <div>4</div>
+          </el-col>
+        </el-row>
       </div>
     </el-scrollbar>
   </div>
