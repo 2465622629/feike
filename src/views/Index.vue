@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <el-scrollbar height="500px">
+    <el-scrollbar max-height="700px">
       <!--      采用布局容器-->
       <div class="common-layout" style="height: auto">
         <el-row>
@@ -30,6 +30,11 @@
         <el-row>
           <el-col>
             <h1 class="about_font green_font">关于飞克</h1>
+          </el-col>
+        </el-row>
+
+        <el-row>
+          <el-col>
             <h2 style="color: rgb(144,144,144); font-weight: 400">诚信为重 &nbsp; &nbsp; 合作共赢</h2>
           </el-col>
         </el-row>
@@ -66,23 +71,52 @@
             </div>
           </el-col>
         </el-row>
-<!--          热线图片-->
+        <!--          热线图片-->
+        <el-row class="about-hot-img" align="center" justify="center" gutter="28">
+          <el-col span="6" offset="16">
+            <div class="gray-box">
+              <h3 style="font-size: 1em;color: rgb(109,109,109)">全国热线</h3>
+              <div>—</div>
+              <h3 style="font-size: 1em;color: rgb(109,109,109)">0576 8068 3000</h3>
+            </div>
+          </el-col>
+
+          <el-col span="6" offset="16">
+            <div class="gray-box">
+              <img src="../assets/image/img/a035.png" alt="">
+            </div>
+          </el-col>
+          <el-col span="6" offset="16">
+            <div class="gray-box">
+              <img src="../assets/image/img/a036.png" alt="">
+            </div>
+          </el-col>
+          <el-col span="6" offset="16">
+            <div class="gray-box">
+              <img src="../assets/image/img/a037.png" alt="" style="width: 45%;margin: 18px 0">
+            </div>
+          </el-col>
+        </el-row>
+        <!--        推荐产品-->
         <el-row>
-          <el-col>
-            <div>1</div>
-          </el-col>
+          <el-col class="graw-font2"><h2>飞克泵业</h2></el-col>
+        </el-row>
 
-          <el-col>
-            <div>12</div>
+        <el-row>
+          <el-col><h1 class="green_font">为您提供以下产品</h1></el-col>
+        </el-row>
+        <el-row gutter="20" justify="center">
+          <el-col class="recommended-margin" span="6" v-for="item in 5" :key="item">
+            <div class="recommended-box">
+              <img class="recommended-img" src="../assets/image/img/a038.png" alt="">
+            </div>
+            <div class="black-font-bold">+ 全不锈钢潜水泵 +</div>
+            <div class="pro-model-num-box"> WQD-S QQX-S</div>
+            <span class="green-button-look">立 即 查 看</span>
           </el-col>
-
-          <el-col>
-            <div>3</div>
-          </el-col>
-
-          <el-col>
-            <div>4</div>
-          </el-col>
+        </el-row>
+        <el-row>
+          <el-col></el-col>
         </el-row>
       </div>
     </el-scrollbar>
@@ -96,7 +130,8 @@ export default {
   components: {},
   data () {
     return {
-      input1: ''
+      input1: '',
+      proList: []
     }
   }
 }
@@ -144,6 +179,23 @@ export default {
 }
 </style>
 <style scoped lang="css">
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+.el-row {
+  margin: 20px;
+}
+
+.graw-font {
+  color: rgb(230, 230, 230);
+}
+
+.graw-font2 {
+  color: rgb(86, 86, 86);
+}
+
 /*关于飞克*/
 .green_font {
   color: rgb(0, 119, 46);
@@ -181,5 +233,72 @@ export default {
   font-size: 1em;
   color: white;
   font-weight: 800;
+}
+
+.gray-box {
+  background-color: rgb(230, 230, 230);
+  width: 200px;
+  height: 100px;
+}
+
+.gray-box img {
+  display: inline-block;
+  width: 70%;
+  margin: 22px 0;
+}
+
+/*热线*/
+.about-hot-img .el-col {
+  padding: 10px 0;
+}
+
+.about-hot-img h3 {
+  margin: 0;
+  padding: 10px;
+}
+
+.recommended-box {
+  border-radius: 50%;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  width: 150px;
+  height: 150px;
+  border: 5px solid rgb(31, 80, 58);
+}
+
+.recommended-img {
+  width: 40%;
+  height: 80%;
+  margin: 10px;
+}
+
+.black-font-bold {
+  font-size: 1em;
+  font-weight: 800;
+}
+
+.pro-model-num-box {
+  width: 150px;
+  height: 80px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 31px 0;
+  background-color: rgb(210, 210, 210);
+  overflow-wrap: break-word;
+}
+
+.green-button-look {
+  margin: 20px 0;
+  display: inline-block;
+  width: 55%;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgb(22, 71, 51);
+  border-radius: 10px;
+}
+
+.recommended-margin div {
+  margin: 20px 0;
 }
 </style>
