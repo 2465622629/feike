@@ -115,9 +115,26 @@
             <span class="green-button-look">立 即 查 看</span>
           </el-col>
         </el-row>
+<!--        简单图片-->
         <el-row>
-          <el-col></el-col>
+          <el-col>
+            <div>
+              <el-image style="width: 70%" :src="require('../assets/image/img/a043.png')"></el-image>
+<!--              <img src="../assets/image/img/a043.png" alt="">-->
+            </div>
+          </el-col>
         </el-row>
+<!--        背景图片-->
+        <div class="back-img">
+          <el-row class="more-img" gutter="30" justify="center">
+            <el-col :span="6">
+              <el-image :src="require('../assets/image/img/a045.png')"></el-image>
+            </el-col>
+            <el-col :span="6" offset="6">
+              <div>123</div>
+            </el-col>
+          </el-row>
+        </div>
       </div>
     </el-scrollbar>
   </div>
@@ -300,5 +317,13 @@ h1, h2, h3, h4, p {
 
 .recommended-margin div {
   margin: 20px 0;
+}
+.back-img{
+  width: 100%;
+  height: 1500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../assets/image/img/a044.png');
+
 }
 </style>
