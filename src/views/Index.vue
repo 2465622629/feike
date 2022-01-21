@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <el-scrollbar max-height="700px">
+    <el-scrollbar>
       <!--      采用布局容器-->
       <div class="common-layout" style="height: auto">
         <el-row>
@@ -131,7 +131,15 @@
               <el-image :src="require('../assets/image/img/a045.png')"></el-image>
             </el-col>
             <el-col :span="6" offset="6">
-              <div>123</div>
+              <div class="green-font-heavy">型号：WQD-S QDX-S WQ-S</div>
+              <div>
+                <span class="graw-font">NO.1</span>
+                <span class="green-font-heavy big-font font-bold">全不锈钢潜水泵</span>
+                <br>
+                <br>
+                <br>
+                <div></div>
+              </div>
             </el-col>
           </el-row>
         </div>
@@ -324,6 +332,17 @@ h1, h2, h3, h4, p {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('../assets/image/img/a044.png');
-
+}
+.more-img{
+  padding-top: 123px;
+}
+.green-font-heavy{
+  color: rgb(39, 83, 64);
+}
+.big-font{
+  font-size: 1.6em;
+}
+.font-bold{
+  font-weight: bolder;
 }
 </style>
