@@ -105,3 +105,6 @@ export default {
   font-size: 0.6em;
 }
 </style>
+<style lang="sass" scoped>
+@import "src/assets/sass/into"
+</style>
