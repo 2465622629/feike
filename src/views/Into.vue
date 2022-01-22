@@ -26,20 +26,49 @@
             </div>
           </el-col>
         </el-row>
-
         <el-row justify="center" align="middle">
           <el-col :span="12">
             <div>公司简介</div>
-            <p class="small-font" style="overflow-wrap: normal" >
+            <p class="small-font">
               &nbsp;&nbsp;浙江飞克泵业有限公司是- -家专 业生产各类水泵及控制设备的水处理企业。公司产品主要为城市建设工程、农业灌溉、生活供水、消防、
-              矿产、污水处理、园林喷灌及工业用水等行业提供全面的水处理解决方案。
+              矿产、污水处理、园林喷灌及工业用水等行业提供全面的水处理解决方案。<br>
               &nbsp;&nbsp;公司秉承“品质”、“创新” 、“未来” 的经营理念，致力于为顾客提供高科技、高品质的产品和服务。公司建立了完善的微机自动水泵
-              测试平台，拥有专业的技术研发队伍，拥有精良先进的生产流水线，并有多项产品取得国家专利，获得国家质量信用企业称号。
+              测试平台，拥有专业的技术研发队伍，拥有精良先进的生产流水线，并有多项产品取得国家专利，获得国家质量信用企业称号。<br>
               &nbsp;&nbsp;“克服阻力，”飞越梦想” 努力创新的飞克人，将继续致力于技术的创新、质量的进步和服务的升华，为顾客创造和提供更大的价值。
-
             </p>
           </el-col>
         </el-row>
+        <el-row>
+          <el-col>
+            <el-image :src="require('@/assets/image/img/a005.png')"></el-image>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col>
+            <div class="green_font title-font-size">
+              飞克生产车间
+            </div>
+            <div class="green_font">FEIKE</div>
+            <p class="txt-font-size">全面开创品牌新时代</p>
+            <p class="txt-font-size">不忘初心 砥砺前行</p>
+          </el-col>
+        </el-row>
+<!--        <el-space direction="vertical" size="30">-->
+          <el-row justify="center" align="right" :size="20" v-for="item in 3" :key="item">
+            <el-space direction="horizontal" :size="60" :wrap="true">
+              <el-col>
+                <div>
+                  <el-image :src="require('@/assets/image/img/a006.png')"></el-image>
+                </div>
+              </el-col>
+              <el-col>
+                <div>
+                  <el-image :src="require('@/assets/image/img/a006.png')"></el-image>
+                </div>
+              </el-col>
+            </el-space>
+          </el-row>
+<!--        </el-space>-->
       </el-main>
     </el-container>
   </div>
@@ -101,7 +130,8 @@ export default {
 .my-title {
   margin: 10px 0;
 }
-.small-font{
+
+.small-font {
   font-size: 0.6em;
 }
 </style>
