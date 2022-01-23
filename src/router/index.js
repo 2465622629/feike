@@ -25,6 +25,11 @@ const routes = [
     path: '/serve',
     name: 'serve',
     component: () => import('@/views/Serve')
+  },
+  {
+    path: '/docDownLoad',
+    name: 'docDown',
+    component: () => import('@/views/docDownload')
   }
 
 ]

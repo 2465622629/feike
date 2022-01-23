@@ -46,7 +46,9 @@
               </el-col>
             </el-row>
             <el-row>
-              <el-col>13</el-col>
+              <el-col>
+                <el-image :src="require('@/assets/image/img/a072.png')"></el-image>
+              </el-col>
             </el-row>
           </el-space>
         </el-main>

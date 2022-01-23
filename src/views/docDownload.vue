@@ -1,12 +1,12 @@
 <template>
-<div class="online">
-在线招聘
-</div>
+  <div class="docDownLoad">
+    下载
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'OnlineRecruitment'
+  name: 'docDownload'
 }
 </script>
 
