@@ -6,9 +6,11 @@
         <el-row>
           <el-col>
             <!--    轮播图-->
-            <el-carousel height="300px">
-              <el-carousel-item v-for="item in 4" :key="item">
-                <h3 class="small">{{ item }}</h3>
+            <el-carousel height="500px">
+              <el-carousel-item v-for="item in proList" :key="item">
+                <div>
+                  <el-image :src="require(`@/assets/image/img/${item}`)" fit="none"></el-image>
+                </div>
               </el-carousel-item>
             </el-carousel>
           </el-col>
@@ -115,32 +117,51 @@
             <span class="green-button-look">立 即 查 看</span>
           </el-col>
         </el-row>
-<!--        简单图片-->
+        <!--        简单图片-->
         <el-row>
           <el-col>
             <div>
               <el-image style="width: 70%" :src="require('../assets/image/img/a043.png')"></el-image>
-<!--              <img src="../assets/image/img/a043.png" alt="">-->
+              <!--              <img src="../assets/image/img/a043.png" alt="">-->
             </div>
           </el-col>
         </el-row>
-<!--        背景图片-->
+        <!--        背景图片-->
         <div class="back-img">
-          <el-row class="more-img" gutter="30" justify="center">
-            <el-col :span="6">
-              <el-image :src="require('../assets/image/img/a045.png')"></el-image>
-            </el-col>
-            <el-col :span="6" offset="6">
-              <div class="green-font-heavy">型号：WQD-S QDX-S WQ-S</div>
-              <div>
-                <span class="graw-font">NO.1</span>
-                <span class="green-font-heavy big-font font-bold">全不锈钢潜水泵</span>
-                <br>
-                <br>
-                <br>
-                <div></div>
-              </div>
-            </el-col>
+          <el-row class="more-img" gutter="30" justify="center" v-for="item in 4" :key="item">
+            <div v-show="item%2===0">
+              <el-col :span="6">
+                <el-image :src="require('../assets/image/img/a045.png')"></el-image>
+              </el-col>
+              <el-col :span="6" offset="6">
+                <div class="green-font-heavy">型号：WQD-S QDX-S WQ-S</div>
+                <div>
+                  <span class="graw-font">NO.1</span>
+                  <span class="green-font-heavy big-font font-bold">全不锈钢潜水泵</span>
+                  <br>
+                  <br>
+                  <br>
+                  <div>
+                    <span>特点：</span>
+                    <p>特点</p>
+                  </div>
+                  <div>
+                    <span>基本性能：</span>
+                    <p>基本性能</p>
+                  </div>
+                  <div>
+                    <span>应用领域：</span>
+                    <p>应用领域</p>
+                  </div>
+                </div>
+                <div>
+                  <el-image></el-image>
+                  <span>耐酸</span>
+                  <span>耐碱</span>
+                  <span>耐高温</span>
+                </div>
+              </el-col>
+            </div>
           </el-row>
         </div>
       </div>
@@ -156,7 +177,11 @@ export default {
   data () {
     return {
       input1: '',
-      proList: []
+      proList: [
+        'banner01.png',
+        'banner1.png',
+        'banner03.png'
+      ]
     }
   }
 }
@@ -326,23 +351,32 @@ h1, h2, h3, h4, p {
 .recommended-margin div {
   margin: 20px 0;
 }
-.back-img{
+
+.back-img {
   width: 100%;
   height: 1500px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('../assets/image/img/a044.png');
 }
-.more-img{
+
+.more-img {
   padding-top: 123px;
 }
-.green-font-heavy{
+
+.green-font-heavy {
   color: rgb(39, 83, 64);
 }
-.big-font{
+
+.big-font {
   font-size: 1.6em;
 }
-.font-bold{
+
+.font-bold {
   font-weight: bolder;
 }
+</style>
+
+<style scoped lang="sass">
+@import "src/assets/sass/index"
 </style>
