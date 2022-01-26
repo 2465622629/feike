@@ -7,7 +7,7 @@
       |
       <router-link to="/serve">产品服务</router-link>
       |
-      <a href="#">淘宝商城</a>
+      <a href="https://www.taobao.com/">淘宝商城</a>
       |
       <router-link to="/onlineRecruitment">在线招聘</router-link>
       |
@@ -17,7 +17,18 @@
     </el-scrollbar>
   </div>
   <router-view/>
+  <footer-end></footer-end>
 </template>
+<script>
+import end from '@/components/end'
+
+export default {
+  name: 'app',
+  components: {
+    footerEnd: end
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -34,6 +45,7 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
