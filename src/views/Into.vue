@@ -1,6 +1,7 @@
 <template>
   <div class="into">
     <el-container>
+      <el-header></el-header>
       <el-main>
         <el-scrollbar>
           <el-space direction="vertical" :size="60">
@@ -57,19 +58,9 @@
             </el-row>
             <!--        <el-space direction="vertical" size="30">-->
             <el-space direction="vertical" :size="120">
-              <el-row justify="center" align="right" gutter="24" v-for="(item,index) in imgList" :key="index">
-                <el-space direction="horizontal" :size="60" :wrap="true">
-                  <el-col :span="12">
-                    <el-card>
-                      <el-image :src="require(`@/assets/image/img/${item.imgUrl}`)" fit="none"></el-image>
-                      <el-row class="img-card-txt">
-                        <el-col :span="12">{{ item.name }}</el-col>
-                        <el-col :span="6" :push="6">{{ index + 1 }}</el-col>
-                      </el-row>
-                    </el-card>
-                  </el-col>
-
-                  <el-col :span="12">
+              <el-row justify="center" align="middle" gutter="24">
+                <el-space direction="horizontal" :size="120" :wrap="true">
+                  <el-col :span="24"  v-for="(item,index) in imgList" :key="index">
                     <el-card>
                       <el-image :src="require(`@/assets/image/img/${item.imgUrl}`)" fit="none"></el-image>
                       <el-row class="img-card-txt">

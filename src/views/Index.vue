@@ -5,26 +5,24 @@
       <div class="common-layout" style="height: auto">
         <el-row>
           <el-col>
-            <!--    轮播图-->
-            <el-carousel height="500px">
-              <el-carousel-item v-for="item in proList" :key="item">
-                <div>
-                  <el-image :src="require(`@/assets/image/img/${item}`)" fit="none"></el-image>
-                </div>
-              </el-carousel-item>
-            </el-carousel>
-          </el-col>
-        </el-row>
-        <el-row justify="center" align="center">
-          <el-col span="24">
-            <!--    搜索框-->
-            <div class="demo-input-size">
-              <el-input
-                v-model="input1"
-                class="w-50 m-2"
-                size="large"
-                placeholder="Please Input"
-              ></el-input>
+            <div class="index-carousel-img">
+              <!--    轮播图-->
+              <el-carousel height="500px" indicator-position="outside">
+                <el-carousel-item v-for="item in proList" :key="item">
+                  <div>
+                    <el-image :src="require(`@/assets/image/img/${item}`)" fit="none"></el-image>
+                  </div>
+                </el-carousel-item>
+              </el-carousel>
+              <div class="index-input">
+                <el-input
+                  v-model="input1"
+                  class="w-50 m-2"
+                  size="large"
+                  :prefix-icon="Search"
+                  placeholder="请输入产品关键字"
+                ></el-input>
+              </div>
             </div>
           </el-col>
         </el-row>
