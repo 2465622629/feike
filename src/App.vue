@@ -21,7 +21,6 @@
 </template>
 <script>
 import end from '@/components/end'
-
 export default {
   name: 'app',
   components: {

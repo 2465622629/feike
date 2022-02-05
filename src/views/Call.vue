@@ -20,11 +20,11 @@
                 </div>
               </el-col>
             </el-row>
-            <el-row>
-              <el-col>联系方式</el-col>
+            <el-row class="call-our-txt">
+              <el-col :span="24">联系方式</el-col>
             </el-row>
-            <el-row>
-              <el-col>
+            <el-row :gutter="10" justify="center">
+              <el-col :span="4">
                 <div>
                   <div>
                     <el-image :src="require('@/assets/image/img/a018.png')"></el-image>
@@ -32,23 +32,23 @@
                   </div>
                 </div>
               </el-col>
-              <el-col>
+              <el-col :span="4">
                 <div>
                   <el-image :src="require('@/assets/image/img/a019.png')"></el-image>
                   <div>台州市温岭市大溪镇沈岙机电园区</div>
                 </div>
-                <el-col>
-                  <div>
-                    <el-image :src="require('@/assets/image/img/a020.png')"></el-image>
-                    <div>台州市温岭市大溪镇沈岙机电园区</div>
-                  </div>
-                </el-col>
+              </el-col>
+              <el-col :span="4">
+                <div>
+                  <el-image :src="require('@/assets/image/img/a020.png')"></el-image>
+                  <div>台州市温岭市大溪镇沈岙机电园区</div>
+                </div>
               </el-col>
             </el-row>
             <!--            地图列-->
             <el-row>
               <el-col>
-                <div></div>
+                <div id="allMap"></div>
               </el-col>
             </el-row>
 <!--          </el-space>-->
@@ -57,7 +57,6 @@
     </el-container>
   </div>
 </template>
-
 <script>
 export default {
   name: 'Call',
